@@ -1,0 +1,46 @@
+HANGMAN GAME
+- MVP 
+	
+{ } Set a question 
+	
+{ } Display Hidden Word: Show the word as blanks (like " _ _ _ _ _ ") for the player to guess.
+	
+{ } User Input: Let the player guess a letter.
+
+{ } Basic Interface: Create a simple setup with a field for guessing letters and a display for the word.
+	
+{ } Check for Matches: Check if the guessed letter is in the word and reveal it if correct.
+	
+{ } Win/Lose Conditions: Decide if the player has won (guessed the word) or lost (made too many wrong guesses).
+	
+- Milestone 1 
+{} Display the Question
+    [x] Q1= "It's a well-known dish in Europe, any ideas?" in HTML and JS
+    [x] Display the hidden word space "_ _ _ _ _ _" in HTML
+    [x] Store the keywords: Paella, Croissant, Pizza, Bratwurst, Schnitzel, Goulash, Tiramisu, Ratatouille. HTML
+    [x] Keywords should come up randomly
+    []  Word display with underscore function 
+    []  Letter Guess Functionality
+    []  Update hangman according to the inccorrec guesses
+    []  Update the display of guessed letters
+    []  Checking if the game over
+    []  Starting a new game
+{ } Display the keyboard
+ A-Z
+    - User should be able to click with mouse
+    
+
+
+- Milestone 2
+{ } Add a visual representation of the hangman (building the parts of the hangman)
+{ } How to play explanation box
+{ } Improve the user interface for restarting or ending the game.
+	
+- Milestone 3
+{ } Track incorrect guesses: Keep count of wrong guesses
+	
+- Milestone 4
+{ } Include hints or clues for revealing a letter in the word.
+	
+- Milestone 5
+{ } Expand the word list with different words or phrases.

@@ -20,10 +20,10 @@ HANGMAN GAME
     [x] Store the keywords: Paella, Croissant, Pizza, Bratwurst, Schnitzel, Goulash, Tiramisu, Ratatouille. HTML
     [x] Keywords should come up randomly
     [x] Word display with underscore function 
-    []  Letter Guess Functionality
-    []  Updating the display with guessed letters
+    [x] Letter Guess Functionality
+    [x] Updating the display with guessed letters
+    [ ]  
     []  Update hangman according to the inccorrec guesses
-    []  Update the display of guessed letters
     []  Checking if the game over
     []  Starting a new game
 { } Display the keyboard

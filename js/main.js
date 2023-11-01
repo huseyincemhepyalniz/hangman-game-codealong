@@ -27,20 +27,26 @@ randomWordSelection()
 
 //Game Variables
 let attemptsRemaining = 6;
-//Updating the word display//
+
+
+
+
 // we create array letterToGuess []  --> p, i, z, z, a
 let lettersToGuess = [];
-// let whatWeWantThe user to see = '_ _ _ _ _'
+
+
+//Updating the word display//
 for (let i = 0; i < wordToGuess.length; i++) {
     lettersToGuess.push(wordToGuess[i]);
 }
-// if lettersGuessd still empty --> 
-let displayWord = " _ ".repeat(wordToGuess.length);
+// let user to see = '_ _ _ _ _'
+let wordInUnderline = "_ ".repeat(wordToGuess.length);
+
 // for each letterToGuess display _ in the dom
 const wordDisplay = document.getElementById("word-display");
-wordDisplay.textContent = displayWord;
+wordDisplay.textContent = wordInUnderline;
 
-// step 2 --> get user input: use an <input> or get a keyboard event.
+// get user input: use an <input> or get a keyboard event.
 const letterInput = document.getElementById("letter-input");
 const enterButton = document.getElementById("enter-button");
 enterButton.addEventListener("click", function () {
@@ -50,36 +56,69 @@ enterButton.addEventListener("click", function () {
         letterInput.value = ""; // Clear the input field
         return;
     }
-   
-    handleGuess(inputLetter);
-    letterInput.value = ""; // Clear the input field for the next guess
-   // Update the word display in the DOM
-    wordDisplay.textContent = displayWord;
+
+    guessTheLetter(inputLetter);
+    letterInput.value = ""; //input field for the next guess
+
+    // Update the word display in the DOM
+    wordDisplay.textContent = wordInUnderline;
 });
-function handleGuess(guess) {
+
+
+
+function guessTheLetter(guess) {
     // Check if the guessed letter is in the word
-    let guessedCorrectly = false;
-    
+    let letterFound = false;
+
+    const attemptsCounter = document.getElementById("attempts-counter");
+      //remember to update the rounds here
+  
     for (let i = 0; i < wordToGuess.length; i++) {
         if (wordToGuess[i] === guess) {
             // If the guessed letter matches a letter in the word,
-            // update the displayWord at the corresponding position
-            displayWord = updateDisplayWord(displayWord, guess, i);
-            guessedCorrectly = true;
+            // update the wordInUnderline at the corresponding position
+            wordInUnderline = updateWordInUnderline(wordInUnderline, guess, i);
+            letterFound = true;
         }
     }
-
-    return guessedCorrectly;
+    if (letterFound === false) {
+        attemptsRemaining--;
+        console.log(attemptsRemaining);
+        attemptsCounter.innerText = attemptsRemaining
+    }
+    console.log("HEREEEE")
+    checkGameOver()
 }
 
-function updateDisplayWord(displayWord, guess, index) {
-    // Create a new displayWord with the guessed letter at the specified index
-    return displayWord.substring(0, index) + guess + displayWord.substring(index + 1);
+
+
+function updateWordInUnderline(wordInUnderline, guess, index) {
+    // Create a new wordInUnderline with the guessed letter at the specified index
+    const wordAsArray=wordInUnderline.split(" ")
+     wordAsArray[index]=guess
+    const joinedWords= wordAsArray.join(" ")
+    console.log("im here ",joinedWords,index)
+    return joinedWords
+   
 }
 
-    // Update the word display in the DOM
-    wordDisplay.textContent = displayWord;
-    
+// Update the word display in the DOM
+wordDisplay.textContent = wordInUnderline;
 
-// Starting a new game
+
+// Checking if the game is over
+
+
+function checkGameOver() {
+    console.log("Inside checkGameOVER",wordInUnderline,wordToGuess);
+const wordWithoutSpaces=wordInUnderline.replace(/\s+/g, '')
+console.log("without",wordWithoutSpaces)
+    if (attemptsRemaining === 0) {
+        console.log("Game Over! You lost");
+        document.getElementById("feedback").textContent = "Game Over! You lost."
+    } else if (wordWithoutSpaces === wordToGuess) {
+        console.log("Congrats! You won");
+        document.getElementById("feedback").textContent = "Congrats! You won"
+    }
+}
 

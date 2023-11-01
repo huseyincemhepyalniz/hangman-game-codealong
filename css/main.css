@@ -1,11 +1,56 @@
 body {
-    background-color: #f40f0f;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-top: 25px;
+}
+
+#game-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 460px;
+    background-color: #fff;
+    /*border: 2px solid #333;*/
+    margin: 20px;
+   
+}
+
+#question1 {
+    font-size: 25px;
+    margin: 10px;
+    color: #7a6262;
 }
 
 
+ #start-button {
+        background-color: #3c423c; 
+        color: white; 
+        border: 5px solid;
+        font-size: 20px;
+        text-align: center 
+}
 
-/* <div>
-    <p style="border-bottom: 1px solid black;">
-        Amount Paid: $ 
-    </p>
-</div> */
+#restart-button {
+    background-color: #3c423c; 
+    color: white; 
+    border: 5px solid;
+    font-size: 20px;
+    text-align: center 
+}
+
+#word-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#feedback {
+    font-size: 18px;
+    color: #0077b6;
+}

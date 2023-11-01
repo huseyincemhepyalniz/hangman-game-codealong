@@ -19,8 +19,9 @@ HANGMAN GAME
     [x] Display the hidden word space "_ _ _ _ _ _" in HTML
     [x] Store the keywords: Paella, Croissant, Pizza, Bratwurst, Schnitzel, Goulash, Tiramisu, Ratatouille. HTML
     [x] Keywords should come up randomly
-    []  Word display with underscore function 
+    [x] Word display with underscore function 
     []  Letter Guess Functionality
+    []  Updating the display with guessed letters
     []  Update hangman according to the inccorrec guesses
     []  Update the display of guessed letters
     []  Checking if the game over

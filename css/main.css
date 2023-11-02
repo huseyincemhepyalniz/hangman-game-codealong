@@ -1,16 +1,38 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #000; 
     text-align: center;
     margin: 0;
     padding: 0;
+    color: #fff; 
 }
 
+
+
+
 h1 {
-    font-size: 30px;
-    color: #333;
+    font-size: 80px;
+    color: #3ff23f; 
     margin-top: 25px;
+    text-shadow:0 0 50px #fa0101; 
 }
+
+#question1{
+    background-color: #6a9d6d;
+    border: 2px solid #3ff23f;
+    padding: 20px;
+    margin: 20px;
+    max-width: 600px;
+    text-align: left;
+    color: #3ff23f;
+    box-shadow: 0 0 20px #3ff23f; 
+    color: #03f81c;
+    font-size: 30px;
+    
+    
+}
+
+
 
 #game-display {
     display: flex;
@@ -18,43 +40,33 @@ h1 {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: #000;
+    border: 2px solid #3ff23f;
     margin: 20px;
     position: relative;
+    box-shadow: 0 0 20px #3ff23f; 
 }
 
-
-
 #game-rules {
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: #000;
+    border: 2px solid #3ff23f;
     padding: 20px;
     margin: 20px;
     max-width: 600px;
     text-align: left;
+    color: #3ff23f;
+    box-shadow: 0 0 50px #02c138; 
 }
 
-
-#enter-button {
-    background-color: #3c423c;
-    color: white;
-    border: 5px solid;
+#enter-button, #restart-button {
+    background-color: #000300;
+    color: #03f81c;
+    border: 5px solid #3ff23f; 
     font-size: 20px;
     text-align: center;
     margin: 10px auto;
+    box-shadow: 100px #3ff23f; 
 }
-
-
-#restart-button {
-    background-color: #3c423c;
-    color: white;
-    border: 5px solid;
-    font-size: 20px;
-    text-align: center;
-    margin: 10px auto;
-}
-
 
 #game-container {
     display: flex;
@@ -63,40 +75,23 @@ h1 {
 }
 
 #word-display {
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     margin: 20px 0;
+    color: #3ff23f;
+    text-shadow: 10px #3ff23f; 
 }
 
 #feedback {
-    font-size: 18px;
-    color: #0077b6;
+    font-size: 250px;
+    color: #3ff23f;
+    text-shadow: 10px #f90303; 
 }
-
 
 #question1 {
-    font-size: 25px;
+    font-size: 30px;
     margin: 10px;
-    color: #7a6262;
+    
 }
 
 
-#game-rules {
-    background-color: #fff;
-    border: 2px solid #333;
-    padding: 20px;
-    margin: 20px;
-    max-width: 600px;
-    text-align: left;
-}
-
-#game-rules h2 {
-    font-size: 20px;
-    color: #333;
-}
-
-#game-rules p {
-    font-size: 16px;
-    color: #333;
-    margin: 5px 0;
-}

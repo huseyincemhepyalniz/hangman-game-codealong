@@ -135,7 +135,6 @@ wordDisplay.textContent = wordInUnderline;
 
 
 
-
 // Checking if the game is over
 function checkGameOver() {
     console.log("Inside checkGameOVER",wordInUnderline,wordToGuess);
@@ -150,3 +149,5 @@ console.log("without",wordWithoutSpaces)
     }
 }
 
+
+  

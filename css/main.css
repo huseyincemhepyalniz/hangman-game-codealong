@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -12,36 +14,52 @@ h1 {
 
 #game-display {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 460px;
+    min-height: 100vh;
     background-color: #fff;
-    /*border: 2px solid #333;*/
+    border: 2px solid #333;
     margin: 20px;
-   
-}
-
-#question1 {
-    font-size: 25px;
-    margin: 10px;
-    color: #7a6262;
+    position: relative;
 }
 
 
- #start-button {
-        background-color: #3c423c; 
-        color: white; 
-        border: 5px solid;
-        font-size: 20px;
-        text-align: center 
+
+#game-rules {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px;
+    max-width: 600px;
+    text-align: left;
 }
 
-#restart-button {
-    background-color: #3c423c; 
-    color: white; 
+
+#enter-button {
+    background-color: #3c423c;
+    color: white;
     border: 5px solid;
     font-size: 20px;
-    text-align: center 
+    text-align: center;
+    margin: 10px auto;
+}
+
+
+#restart-button {
+    background-color: #3c423c;
+    color: white;
+    border: 5px solid;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #word-display {
@@ -53,4 +71,32 @@ h1 {
 #feedback {
     font-size: 18px;
     color: #0077b6;
+}
+
+
+#question1 {
+    font-size: 25px;
+    margin: 10px;
+    color: #7a6262;
+}
+
+
+#game-rules {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px;
+    max-width: 600px;
+    text-align: left;
+}
+
+#game-rules h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+#game-rules p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
 }

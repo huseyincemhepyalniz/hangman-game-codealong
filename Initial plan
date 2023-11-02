@@ -22,10 +22,10 @@ HANGMAN GAME
     [x] Word display with underscore function 
     [x] Letter Guess Functionality
     [x] Updating the display with guessed letters
-    [ ]  
+    [x] Remaining Attempts Functionality 
     []  Update hangman according to the inccorrec guesses
-    []  Checking if the game over
-    []  Starting a new game
+    [x]  Checking if the game over
+    [x]  Starting a new game
 { } Display the keyboard
  A-Z
     - User should be able to click with mouse

@@ -9,6 +9,21 @@ question.innerHTML = "It's a well-known dish in Europe, any ideas?";
 
 let europeanDishes = ["paella", "croissant", "pizza", "bratwurst", "schnitzel", "goulash", "tiramisu", "ratatouille"];
 
+
+const dishTips = {
+    paella: "Hint: Famous Spanish rice dish with saffron and various ingredients.",
+    croissant: "Hint: Buttery, flaky pastry that originated in France.",
+    pizza: "Hint: Popular Italian dish with a thin crust, tomato sauce, and various toppings.",
+    bratwurst: "Hint: German sausage made of pork, beef, or veal.",
+    schnitzel: "Hint: Breaded and fried meat cutlet, often made with pork or veal.",
+    goulash: "Hint: Hungarian stew made with meat and seasoned with paprika.",
+    tiramisu: "Hint: Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.",
+    ratatouille: "Hint: French vegetable stew, often served as a side dish."
+};
+
+
+
+
 //Random Word Selection
 
 let wordToGuess;
@@ -16,6 +31,11 @@ function randomWordSelection() {
     // select random ward
     const randomIndex = Math.floor(Math.random() * europeanDishes.length);
     wordToGuess = europeanDishes[randomIndex];
+
+    const tipsDiv = document.getElementById('tips');
+    tipsDiv.textContent = dishTips[wordToGuess];
+
+
     // storing the length in a variable
     let europeanDishToGuessLength = wordToGuess.length
     // target element
@@ -26,7 +46,13 @@ function randomWordSelection() {
 randomWordSelection()
 
 //Game Variables
-let attemptsRemaining = 6;
+let attemptsRemaining = 7;
+
+
+
+//HangmanInitialazation
+
+
 
 
 
@@ -86,7 +112,8 @@ function guessTheLetter(guess) {
         console.log(attemptsRemaining);
         attemptsCounter.innerText = attemptsRemaining
     }
-    console.log("HEREEEE")
+
+
     checkGameOver()
 }
 
@@ -97,7 +124,7 @@ function updateWordInUnderline(wordInUnderline, guess, index) {
     const wordAsArray=wordInUnderline.split(" ")
      wordAsArray[index]=guess
     const joinedWords= wordAsArray.join(" ")
-    console.log("im here ",joinedWords,index)
+    console.log(joinedWords,index)
     return joinedWords
    
 }
@@ -106,9 +133,10 @@ function updateWordInUnderline(wordInUnderline, guess, index) {
 wordDisplay.textContent = wordInUnderline;
 
 
+
+
+
 // Checking if the game is over
-
-
 function checkGameOver() {
     console.log("Inside checkGameOVER",wordInUnderline,wordToGuess);
 const wordWithoutSpaces=wordInUnderline.replace(/\s+/g, '')

@@ -1,0 +1,18 @@
+Description
+This is a simple word game created using JavaScript. The game displays a European dish as a word with missing letters, and the player's task is to guess the letters one by one. The player has a limited number of attempts, and if they run out of attempts before guessing the word, they lose. If they successfully guess the word, they win.
+
+How to Play
+When you start the game, you will see a European dish name displayed as underscores (e.g., "_ _ _ _ _ _").
+You have 7 attempts to guess the letters in the word.
+Enter a letter in the input field and click the "Enter" button to guess.
+If the letter is correct, it will be revealed in its corresponding position in the word.
+If the letter is incorrect, your remaining attempts will decrease.
+Continue guessing letters until you either complete the word or run out of attempts.
+The game will end with a message: "Game Over! You lost" if you run out of attempts or "Congrats! You won" if you successfully guess the word.
+
+Additional Notes
+The game selects a random European dish at the beginning of each round.
+Make sure to enter only single lowercase letters (a to z) when guessing.
+You can see your remaining attempts on the screen.
+The game will automatically display letters you've guessed correctly in their correct positions.
+Enjoy playing word game with European dishes! Good luck!

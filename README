@@ -10,6 +10,11 @@ If the letter is incorrect, your remaining attempts will decrease.
 Continue guessing letters until you either complete the word or run out of attempts.
 The game will end with a message: "Game Over! You lost" if you run out of attempts or "Congrats! You won" if you successfully guess the word.
 
+Demo
+
+https://huseyincemhepyalniz.github.io/word-game-codealong/ 
+
+
 Additional Notes
 The game selects a random European dish at the beginning of each round.
 Make sure to enter only single lowercase letters (a to z) when guessing.
